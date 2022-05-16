@@ -1,0 +1,37 @@
+<H1>Angular ToDo App</H1>
+<div class="login-page">
+  <div style="margin-top: 5%;">
+    
+    <mat-card class="mt-3" style="
+    padding: 10px;">
+      <H2 style="text-align: center;">Sign In</H2>
+      <form [formGroup]="signupForm">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input formControlName = "name" type="text" matInput placeholder="Placeholder">
+          <mat-icon matSuffix color="primary">person</mat-icon>
+          <mat-hint></mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input formControlName = "email" type="email" matInput placeholder="Placeholder">
+          <mat-icon matSuffix color="primary">email</mat-icon>
+          <mat-hint></mat-hint>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input formControlName = "password" type="password" matInput placeholder="Placeholder">
+        <mat-icon matSuffix color="primary">lock</mat-icon>
+        
+        <mat-hint></mat-hint>
+    </mat-form-field>
+    <button class="login-button" (click)="signup()" mat-raised-button [disabled] = "signupForm.invalid" color="primary"  >Login</button>
+      </form>
+      <p style="text-align: center;">Connect to your account ? <a routerLink="/login">Login</a></p>
+    </mat-card>
+  </div>    
+</div>
+  

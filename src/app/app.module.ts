@@ -18,13 +18,18 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { SignupComponent } from './signup/signup.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     TodoComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +37,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    MatExpansionModule,
     MatToolbarModule,
     MatCardModule,
     MatFormFieldModule,
@@ -40,7 +46,7 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatTabsModule,
     MatCheckboxModule,
-    
+    HttpClientModule,
     
     DragDropModule
   ],
